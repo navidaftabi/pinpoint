@@ -267,7 +267,7 @@ See [`data/README.md`](data/README.md) for exact data-generation details.
 If you use this code, please cite the paper:
 
 ```bibtex
-@misc{pinpoint2026aftabi,
+@misc{pinpoint2026,
   title   = {PINPOINT: Probabilistic Residual Fusion for Cyberattack Detection and Localization in Power Systems},
   author  = {Author(s)},
   note    = {Note},
