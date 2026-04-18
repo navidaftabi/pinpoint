@@ -1,0 +1,13 @@
+# evaluate I5_nl5
+device: auto
+model:
+  ckpt_path: ckpt/baseline/dnn_ae.pt
+data:
+  X: data/baseline/ae/eval/I5/n5/X_I5_nl5.pt
+  y: data/baseline/ae/eval/I5/n5/y_I5_nl5.pt
+  batch_size: 128
+out:
+  dir: eval/baseline/ae/I5/n5
+  num_classes: 4
+  target_names: ["Normal", "Location1", "Location2", "Location3"]
+  cm_title: "AE — Severity=5, Noise=5%"

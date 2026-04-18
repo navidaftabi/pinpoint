@@ -1,0 +1,25 @@
+task: pinpoint
+device: auto
+model:
+  kwargs:
+    channels: 358
+    num_residuals: 3
+    mc_samples: 30
+train:
+  epochs: 1000
+  lr: 1e-1
+  scheduler: true
+  weight_decay: 1e-5
+  grad_clip: 10.0
+  ckpt_path: ckpt/pinpoint/pinpoint.pt
+  patience: 30  
+  plot_dir: img/pinpoint
+  plt_name: pinpoint
+data:
+  root: data/pinpoint
+  type: vector
+  train_X: data/pinpoint/X_train.pt
+  train_Y: data/pinpoint/y_train.pt
+  test_X: data/pinpoint/X_test.pt
+  test_Y: data/pinpoint/y_test.pt
+  batch_size: 64

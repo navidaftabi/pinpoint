@@ -1,0 +1,26 @@
+task: rnn
+device: cpu
+model:
+  kwargs:
+    latent_dim: 118
+    window: 10
+    hidden_size: 100
+    num_layers: 2
+train:
+  epochs: 1000
+  lr: 1e-1
+  scheduler: True
+  weight_decay: 5e-5
+  grad_clip: 10.0
+  ckpt_path: ckpt/rnn/rnn_50%.pt
+  patience: 30
+  plot_dir: img/rnn
+  plt_name: rnn_50%
+data:
+  root: data/temporal
+  type: sequence
+  train_X: data/temporal/X_train_50%.pt
+  train_Y: data/temporal/y_train_50%.pt
+  test_X: data/temporal/X_test_50%.pt
+  test_Y: data/temporal/y_test_50%.pt
+  batch_size: 16

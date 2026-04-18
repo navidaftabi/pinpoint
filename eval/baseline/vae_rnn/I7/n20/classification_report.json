@@ -1,0 +1,39 @@
+{
+  "Normal": {
+    "precision": 0.9996950289722476,
+    "recall": 1.0,
+    "f1-score": 0.9998474912307458,
+    "support": 3278.0
+  },
+  "Location1": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3278.0
+  },
+  "Location2": {
+    "precision": 0.997869101978691,
+    "recall": 1.0,
+    "f1-score": 0.998933414596983,
+    "support": 3278.0
+  },
+  "Location3": {
+    "precision": 1.0,
+    "recall": 0.9975594874923734,
+    "f1-score": 0.9987782529016493,
+    "support": 3278.0
+  },
+  "accuracy": 0.9993898718730934,
+  "macro avg": {
+    "precision": 0.9993910327377347,
+    "recall": 0.9993898718730934,
+    "f1-score": 0.9993897896823445,
+    "support": 13112.0
+  },
+  "weighted avg": {
+    "precision": 0.9993910327377347,
+    "recall": 0.9993898718730934,
+    "f1-score": 0.9993897896823445,
+    "support": 13112.0
+  }
+}

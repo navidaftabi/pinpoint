@@ -1,0 +1,13 @@
+# config file for constructing datasets to train PINPOINT
+normal_data_path: "data/matlab/Normal2.mat"
+var_x: "Z"
+var_res: "Res"
+attack_dir: "data/matlab/I9"
+out_dir: "data/baseline/ae"
+train_percent: 0.85
+window: 10                   # sequence length
+batch_size_encode: 256
+device: "mps"               # or "cpu" / "mps"
+
+# directory containing your saved AE checkpoints named like: ae_0%.pt
+ckpt_ae: "ckpt/ae/ae_0%.pt"

@@ -1,0 +1,13 @@
+# evaluate I5_nl0
+device: auto
+model:
+  ckpt_path: ckpt/baseline/vae_rnn_clf.pt
+data:
+  X: data/baseline/vae_rnn/eval/I5/n0/X_I5_nl0.pt
+  y: data/baseline/vae_rnn/eval/I5/n0/y_I5_nl0.pt
+  batch_size: 128
+out:
+  dir: eval/baseline/vae_rnn/I5/n0
+  num_classes: 4
+  target_names: ["Normal", "Location1", "Location2", "Location3"]
+  cm_title: "VAE+RNN — Severity=5, Noise=0%"

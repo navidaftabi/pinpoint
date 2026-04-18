@@ -1,0 +1,24 @@
+task: vae
+device: auto
+model:
+  kwargs:
+    hidden_dims: [236,118]
+    latent_dim: 118
+    input_dim: 358
+train:
+  epochs: 1000
+  lr: 1e-1
+  scheduler: True
+  weight_decay: 5e-5
+  grad_clip: 10.0
+  beta_vae: 2.0
+  ckpt_path: ckpt/vae/vae_50%.pt
+  patience: 30
+  plot_dir: img/vae
+  plt_name: vae_50%
+data:
+  root: data/spatial
+  type: vector
+  train_X: data/spatial/X_train_50%.pt
+  test_X: data/spatial/X_test_50%.pt
+  batch_size: 16

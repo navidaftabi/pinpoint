@@ -1,0 +1,14 @@
+# config file for constructing datasets to train transformer and LSTM
+data_path: "data/matlab/Normal1.mat"
+var_name: "Z"
+attack2noise_dir: "data/matlab/I7"
+out_dir: "data/temporal"
+train_percent: 0.85
+window: 10                   # sequence length
+batch_size_encode: 256
+device: "mps"               # or "cpu" / "mps"
+norm_operation_window: 50
+noise_percents: [0.0, 0.05, 0.10, 0.20, 0.50]
+
+# directory containing your saved VAE checkpoints named like: vae_0%.pt, vae_5%.pt, ...
+ckpt_dir: "ckpt/vae"

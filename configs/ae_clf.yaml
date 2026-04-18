@@ -1,0 +1,24 @@
+task: dnn_ae
+device: auto
+model:
+  kwargs:
+    channels: 358
+    num_residuals: 2
+train:
+  epochs: 1000
+  lr: 1e-1
+  scheduler: true
+  weight_decay: 1e-5
+  grad_clip: 10.0
+  ckpt_path: ckpt/baseline/dnn_ae.pt
+  patience: 30  
+  plot_dir: img/baseline
+  plt_name: dnn_ae
+data:
+  root: data/baseline/dnn_ae
+  type: vector
+  train_X: data/baseline/dnn_ae/X_train.pt
+  train_Y: data/baseline/dnn_ae/y_train.pt
+  test_X: data/baseline/dnn_ae/X_test.pt
+  test_Y: data/baseline/dnn_ae/y_test.pt
+  batch_size: 64

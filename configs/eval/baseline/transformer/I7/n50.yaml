@@ -1,0 +1,13 @@
+# evaluate I7_nl50
+device: auto
+model:
+  ckpt_path: ckpt/baseline/vae_transformer_clf.pt
+data:
+  X: data/baseline/transformer/eval/I7/n50/X_I7_nl50.pt
+  y: data/baseline/transformer/eval/I7/n50/y_I7_nl50.pt
+  batch_size: 128
+out:
+  dir: eval/baseline/transformer/I7/n50
+  num_classes: 4
+  target_names: ["Normal", "Location1", "Location2", "Location3"]
+  cm_title: "VAE+Transformer — Severity=3, Noise=50%"

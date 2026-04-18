@@ -1,0 +1,13 @@
+# evaluate I9_nl0
+device: auto
+model:
+  ckpt_path: ckpt/pinpoint/pinpoint.pt   # your trained PINPOINT head
+data:
+  X: data/pinpoint/eval/I9/n0/X_I9_nl0.pt
+  y: data/pinpoint/eval/I9/n0/y_I9_nl0.pt
+  batch_size: 128
+out:
+  dir: eval/pinpoint/I9/n0
+  num_classes: 4
+  target_names: ["Normal", "Location1", "Location2", "Location3"]
+  cm_title: "PINPOINT — Severity=1, Noise=0%"

@@ -1,0 +1,13 @@
+# evaluate I9_nl10
+device: auto
+model:
+  ckpt_path: ckpt/baseline/dnn_ae.pt
+data:
+  X: data/baseline/ae/eval/I9/n10/X_I9_nl10.pt
+  y: data/baseline/ae/eval/I9/n10/y_I9_nl10.pt
+  batch_size: 128
+out:
+  dir: eval/baseline/ae/I9/n10
+  num_classes: 4
+  target_names: ["Normal", "Location1", "Location2", "Location3"]
+  cm_title: "AE — Severity=1, Noise=10%"

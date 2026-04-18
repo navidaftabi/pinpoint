@@ -1,0 +1,25 @@
+task: pinpoint
+device: auto
+model:
+  kwargs:
+    channels: 358
+    num_residuals: 3
+    mc_samples: 30
+train:
+  epochs: 1000
+  lr: 1e-1
+  scheduler: true
+  weight_decay: 1e-5
+  grad_clip: 10.0
+  ckpt_path: ckpt/baseline/vae_transformer_clf.pt
+  patience: 30  
+  plot_dir: img/baseline
+  plt_name: vae_transformer_clf
+data:
+  root: data/baseline/transformer
+  type: vector
+  train_X: data/baseline/transformer/X_train.pt
+  train_Y: data/baseline/transformer/y_train.pt
+  test_X: data/baseline/transformer/X_test.pt
+  test_Y: data/baseline/transformer/y_test.pt
+  batch_size: 64

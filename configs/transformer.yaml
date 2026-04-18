@@ -1,0 +1,29 @@
+task: transformer
+device: auto
+model:
+  kwargs:
+    input_dim: 118
+    n_heads: 4
+    depth_enc: 3
+    depth_dec: 3
+    d_model: 236
+    dim_ff: 512
+    dropout: 0.1
+train:
+  epochs: 1000
+  lr: 1e-1
+  scheduler: true
+  weight_decay: 1e-5
+  grad_clip: 10.0
+  ckpt_path: ckpt/transformer/transformer_50%.pt
+  patience: 30  
+  plot_dir: img/transformer
+  plt_name: transformer_50%
+data:
+  root: data/temporal
+  type: sequence
+  train_X: data/temporal/X_train_50%.pt
+  train_Y: data/temporal/y_train_50%.pt
+  test_X: data/temporal/X_test_50%.pt
+  test_Y: data/temporal/y_test_50%.pt
+  batch_size: 16

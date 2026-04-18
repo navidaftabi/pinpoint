@@ -1,0 +1,24 @@
+# I9_nl10
+mode: pinpoint_eval         # (ignored by parser; you pass via CLI)
+device: "mps"                # or "cpu"/"cuda"
+window: 10                  # your rnn/transformer window
+num_samples: 30             # MC samples from VAE
+batch_size_encode: 256
+
+# Naming aid (used for output filenames)
+severity: 9                 # extracts "I9" in output name
+noise_level: 10              # 0, 5, 10, 20, 50
+
+# Models (pick the VAE/Transformer trained on this noise level)
+ckpt_sp: ckpt/vae/vae_10%.pt
+ckpt_tp: ckpt/transformer/transformer_10%.pt
+
+# Data sources
+normal_data_path: data/matlab/Normal2.mat
+attack_dir: data/matlab/I9                # folder containing the 3 attack classes at severity 9
+var_x: Z                           # matrix name in .mat files
+var_res: Res                       # matrix name in .mat files
+include_se: true
+
+# Output
+out_dir: data/baseline/transformer/eval/I9/n10

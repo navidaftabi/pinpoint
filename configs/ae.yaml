@@ -1,0 +1,21 @@
+task: ae
+device: auto
+model:
+  kwargs:
+    hidden_dims: [136]
+    latent_dim: 118
+    input_dim: 358
+train:
+  epochs: 1000
+  lr: 1e-2
+  weight_decay: 5e-5
+  grad_clip: 1.0
+  ckpt_path: ckpt/ae/ae_50%.pt
+  patience: 30  
+  plot_path: img/ae/ae_50%.png
+data:
+  root: data/spatial
+  type: vector
+  train_X: data/spatial/X_train_50%.pt
+  test_X: data/spatial/X_test_50%.pt
+  batch_size: 16

@@ -1,0 +1,13 @@
+# evaluate I8_nl20
+device: auto
+model:
+  ckpt_path: ckpt/baseline/vae_transformer_clf.pt
+data:
+  X: data/baseline/transformer/eval/I8/n20/X_I8_nl20.pt
+  y: data/baseline/transformer/eval/I8/n20/y_I8_nl20.pt
+  batch_size: 128
+out:
+  dir: eval/baseline/transformer/I8/n20
+  num_classes: 4
+  target_names: ["Normal", "Location1", "Location2", "Location3"]
+  cm_title: "VAE+Transformer — Severity=2, Noise=20%"

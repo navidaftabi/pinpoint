@@ -1,0 +1,8 @@
+# config file for constructing datasets to train VAE and AE
+data_path: "data/matlab/data.mat"
+var_name: "Z"
+attack2noise_dir: "data/matlab/I7"
+out_dir: "data/spatial"
+train_percent: 0.8
+noise_percents: [0.0, 0.05, 0.10, 0.20, 0.50]   # 0%, 5%, 10%, 20%, 50%
+norm_operation_window: 50
