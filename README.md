@@ -9,7 +9,7 @@ PINPOINT is a probabilistic residual-fusion framework for covert cyberattack det
 - a **temporal prediction residual** from an RNN.
 
 <p align=center>
-    <img src="img/Graphics.png" width="600"/>
+    <img src="img/Graphics.png" width="900"/>
 </p>
 
 The repository also includes three architectural baselines used in the paper:
